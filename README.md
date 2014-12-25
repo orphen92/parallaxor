@@ -64,3 +64,8 @@ $('#mycontainer').parallaxor({
 Examples
 -------------
 For live examples please click [here](http://www.commingsoon.com) ( comming soon ).
+
+License
+-------------
+Released under the GNU General Public License  
+http://www.gnu.org/copyleft/gpl.html
