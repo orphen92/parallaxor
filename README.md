@@ -12,8 +12,7 @@ Please use the [tracker](https://github.com/alexandrubau/parallaxor/issues) to r
 
 How does it work ?
 -------------
-Parallaxor uses the CSS property called `transform` in conjuction with `translate` to reposition the elements inside the container when the user scrolls. Example: `transform: translate(0, 100px)` - this CSS code will move an element to the right for 100px.  
-It is important for the container to have the CSS properties provided here ( [parallaxor.min.css](https://raw.githubusercontent.com/alexandrubau/parallaxor/master/jquery.parallaxor.min.css) ) so don't forget to include the CSS file.
+Parallaxor uses the CSS property called `transform` in conjuction with `translate` to reposition the elements inside the container when the user scrolls. Example: `transform: translate(0, 100px)` - this CSS code will move an element to the right for 100px. It is important for the container to have the CSS properties provided here ( [parallaxor.min.css](https://raw.githubusercontent.com/alexandrubau/parallaxor/master/jquery.parallaxor.min.css) ) so don't forget to include the CSS file.
 
 Installation
 -------------
@@ -50,10 +49,10 @@ Example:
 $('#mycontainer').parallaxor({
     top     : false,
     layers  : {
-        'img': {
-          distance      : '100%',
+        'img' : {
+            distance    : '100%',
         },
-        'h1, h2.mytitleclass'    : {
+        'h1, h2.mytitleclass' : {
             distance    : '100px',
             direction   : 'left'
         }
@@ -63,9 +62,8 @@ $('#mycontainer').parallaxor({
 
 Examples
 -------------
-For live examples please click [here](http://www.commingsoon.com) ( comming soon ).
+For live examples check [here](http://www.commingsoon.com) ( comming soon ).
 
 License
 -------------
-Released under the GNU General Public License  
-http://www.gnu.org/copyleft/gpl.html
+Released under the GNU General Public License ( http://www.gnu.org/copyleft/gpl.html ).
