@@ -41,7 +41,7 @@ $('#mycontainer').parallaxor({
 
 Options
 -------------
-`top ( boolean - default: true )` - Determines if the layers inside the container should start moving when the container touches the top of the user's browser. This is useful if you use the parallax effect inside the header of your website.  
+`top ( boolean - default: true )` - Determines if the layers inside the container should start moving after the container touches the top of the user's browser. This is useful if you use the parallax effect inside the header of your website.  
 `layers ( object - default: {} )` - Object holding all the layers that you want to move inside the container. The **key** must be a CSS selector of one or many children inside the container, and the **value** must be an object holding any of the layer properties.  
 `layer properties ( object - default: { distance: '100%', direction: 'down' } )` - In here you can specify how much the layer should move and in which direction. The **distance** represents how much you would like the layer to move inside the container when the container is inside the view range ( the user can see it in the browser ). It can be expressed in **pixels** or **percentage**. As a general rule, when you have elements that are bigger than container ( such as images ) you should use percentage. The **direction** can have 4 values: up, down, left, right.
   
