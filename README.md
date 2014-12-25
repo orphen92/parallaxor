@@ -30,7 +30,7 @@ Activate the script:
 $('#mycontainer').parallaxor({
     top     : false,
     layers  : {
-        'h1'    : {
+        'h1'  : {
             distance    : '200px',
             direction   : 'right'
         }
