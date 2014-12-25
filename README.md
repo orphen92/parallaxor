@@ -7,7 +7,7 @@ Table of contents
 -------------
 * [Compatibility](#compatibility)
 * [How does it work ?](#how-does-it-work-)
-* [Installation](#installation)
+* [Installation and usage](#installation-and-usage)
 * [Options](#options)
 * [Examples](#examples)
 * [License](#license)
@@ -23,7 +23,7 @@ How does it work ?
 -------------
 Parallaxor uses the CSS property called `transform` in conjuction with `translate` to reposition the elements inside the container when the user scrolls. Example: `transform: translate(0, 100px)` - this CSS code will move an element to the right for 100px. It is important for the container to have the CSS properties provided here ( [parallaxor.min.css](https://raw.githubusercontent.com/alexandrubau/parallaxor/master/jquery.parallaxor.min.css) ) so don't forget to include the CSS file.
 
-Installation
+Installation and usage
 -------------
 Download [parallaxor.min.js](https://raw.githubusercontent.com/alexandrubau/parallaxor/master/jquery.parallaxor.min.js) and [parallaxor.min.css](https://raw.githubusercontent.com/alexandrubau/parallaxor/master/jquery.parallaxor.min.css).  
 Add the following line into the HEAD section of your website:  
