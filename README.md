@@ -43,18 +43,26 @@ Add the next lines at the end of the BODY section of your website, right before 
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="parallaxor.min.js"></script>
 ```
+Make sure you create a container with elements which will act as layers for the parallax effect.  
+```html
+<div id="mycontainer">
+  <h1>Parallaxor is awesome !</h1>
+  <h2>Parallaxor is awesome !</h2>
+  <img src="picture.jpg">
+</div>
+```
 Activate the script: 
 ```javascript
 $('#mycontainer').parallaxor({
-    top     : false,
+    top     : true,
     layers  : {
-        'h1'  : {
+        'h1, h2'  : {
             distance    : '200px',
             direction   : 'right'
         },
-        'h1, h2.mytitleclass' : {
-            distance    : '100px',
-            direction   : 'left'
+        'img' : {
+            distance    : '100%',
+            direction   : 'down'
         }
     }
 });
@@ -73,7 +81,10 @@ Here you have 3 cases:
 `layers {object}(default:{})`  
 Object holding all the layers that you want to move inside the container. The **key** must be a CSS selector of one or many children inside the container and the **value** must be an object holding any of the layer properties specified below.  
 
-  `layer_properties {object}(default:{ distance: '100%', direction: 'down' })` - In here you can specify how much the layer should move and in which direction. The **distance** represents how much you would like the layer to move inside the container when the container is inside the view range ( the user can see it in the browser ). It can be expressed in **pixels** or **percentage**. As a general rule, when you have elements that are bigger than container ( such as images ) you should use percentage. The **direction** can have 4 values: up, down, left, right.
+`layer_properties {object}(default:{ distance: '100%', direction: 'down' })`  
+In here you can specify how much the layer should move and in which direction.  
+
+The **distance** represents how much you would like the layer to move inside the container when the container is inside the view range ( the user can see it in the browser ). It can be expressed in **pixels** or **percentage**. As a general rule, when you have elements that are bigger than container ( such as images ) you should use percentage. The **direction** can have 4 values: `up`, `down`, `left`, `right`.
 
 Examples
 -------------
