@@ -1,0 +1,10 @@
+#header h1 {
+    width: 192px;
+    height: 37px;
+    text-shadow: 1px 1px 0 #333333;
+    position: absolute;
+    left:50%;
+    top:50%;
+    z-index: 2;
+    margin:-18px 0 0 -96px;
+}
