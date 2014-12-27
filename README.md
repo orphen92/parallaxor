@@ -74,7 +74,7 @@ Options
 Represents the distance from the top of the browser after which the layers start moving.  
 
 Here you have 3 cases:  
-1. Parallax container is glued on the top of the browser, without any pixels in between your container and the top of the browser you can set this to `true` or `0` or `0px` ( see [first](#examples) example ).  
+1. Parallax container is glued on the top of the browser ( without any pixels in between your container and the top of the browser ) you can set this to `true` or `0` or `0px` ( see [first](#examples) example ).  
 2. Parallax container is, for example, 100px from the top of the browser you can set this option to `100px` or `100`.  
 3. If you want the layers inside the container to move as soon as the container is inside the view range of the browser set this option to `false` ( see [second](#examples) example ).  
 
