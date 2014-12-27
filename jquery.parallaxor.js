@@ -176,7 +176,7 @@
                 var css_transform;
                 switch(data.direction){
                     case 'up':
-                        css_transform = 'translate(0, ' + (viewPercentage/100 * distance) + 'px)';
+                        css_transform = 'translate(0, -' + (viewPercentage/100 * distance) + 'px)';
                     break;
                     case 'left':
                         css_transform = 'translate(-' + (viewPercentage/100 * distance) + 'px, 0)';
@@ -185,7 +185,7 @@
                         css_transform = 'translate(' + (viewPercentage/100 * distance) + 'px, 0)';
                     break;
                     default: // case 'down':
-                        css_transform = 'translate(0, -' + (viewPercentage/100 * distance) + 'px)';
+                        css_transform = 'translate(0, ' + (viewPercentage/100 * distance) + 'px)';
                     break;
                 }
 
