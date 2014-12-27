@@ -47,7 +47,7 @@ Make sure you create a container with elements which will act as layers for the 
 ```html
 <div id="mycontainer">
   <h1>Parallaxor is awesome !</h1>
-  <h2>Parallaxor is awesome !</h2>
+  <h2>This was too simple</h2>
   <img src="picture.jpg">
 </div>
 ```
