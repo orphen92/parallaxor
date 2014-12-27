@@ -1,12 +1,13 @@
 Parallaxor - v0.1
 =============
 
-Parallaxor is a simple jQuery plugin which allows you to create beautiful parallax effects for your website with minimum code. It can be used to reposition any kind of element, in any direction, inside a container, based on user's scroll.  
+Parallaxor is a simple jQuery plugin which allows you to create beautiful parallax effects for your website with minimum code. It can be used to reposition any element, in any direction, inside a container, based on user's scroll.  
 
 Table of contents
 -------------
 * [Compatibility](#compatibility)
-* [How does it work ?](#how-does-it-work-)
+* [Requirements](#requirements)
+* [How does it work](#how-does-it-work)
 * [Installation and usage](#installation-and-usage)
 * [Options](#options)
 * [Examples](#examples)
@@ -19,9 +20,15 @@ I've only tested this plugin with latest desktop versions of Chrome 39.0.2171.95
   
 Please use the [tracker](https://github.com/alexandrubau/parallaxor/issues) to report any bugs. Thank you !
 
-How does it work ?
+Requirements
 -------------
-Parallaxor uses the CSS property called `transform` in conjuction with `translate` to reposition the elements inside the container when the user scrolls. Example: `transform: translate(0, 100px)` - this CSS code will move an element to the right for 100px. It is important for the container to have the CSS properties provided here ( [parallaxor.min.css](https://raw.githubusercontent.com/alexandrubau/parallaxor/master/jquery.parallaxor.min.css) ) so don't forget to include the CSS file.
+
+This plugin requires [jQuery](http://jquery.com) v1.11.2+ but it might work on older versions too. Make sure you include jQuery before the plugin.
+
+How does it work
+-------------
+Parallaxor uses the CSS property called `transform` in conjuction with `translate` to reposition the elements inside the container when the user scrolls.  
+Example: `transform: translate(0, 100px)` - this CSS code will move an element to the right for 100px.
 
 Installation and usage
 -------------
@@ -30,8 +37,9 @@ Add the following line into the HEAD section of your website:
 ```html
 <link href="parallaxor.min.css" rel="stylesheet">
 ```
-Add the next line at the end of the BODY section of your website, right before closing the tag:  
+Add the next lines at the end of the BODY section of your website, right before closing the tag:  
 ```html
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="parallaxor.min.js"></script>
 ```
 Activate the script: 
@@ -71,8 +79,9 @@ $('#mycontainer').parallaxor({
 
 Examples
 -------------
-For live examples check [here](http://www.commingsoon.com) ( comming soon ).
+* [First](http://alexandrubau.github.io/parallaxor/examples/first/index.html)
+* [Second](http://alexandrubau.github.io/parallaxor/examples/second/index.html)
 
 License
 -------------
-Released under the GNU General Public License ( http://www.gnu.org/copyleft/gpl.html ).
+Released under the [GNU General Public License]( http://www.gnu.org/copyleft/gpl.html ).
