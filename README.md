@@ -67,7 +67,7 @@ $('#mycontainer').parallaxor({
     }
 });
 ```
-**TIP:*** I suggest you to add the CSS class 'parallax-container' to the container you are using in order to avoid the 'flick' efect you might see. The class is added automatically by the plugin to your container but only after the browser loads the JavaScript file. Due to the delay, the user might see for a fraction of a second some elements that are not positioned corectly.
+**TIP:** I suggest you to add the CSS class 'parallax-container' to the container you are using in order to avoid the 'flick' efect you might see. The class is added automatically by the plugin to your container but only after the browser loads the JavaScript file. Due to the delay, the user might see for a fraction of a second some elements that are not positioned corectly.
 
 Options
 -------------
