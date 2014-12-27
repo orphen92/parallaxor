@@ -51,24 +51,6 @@ $('#mycontainer').parallaxor({
         'h1'  : {
             distance    : '200px',
             direction   : 'right'
-        }
-    }
-});
-```
-
-Options
--------------
-`top ( boolean - default: true )` - Determines if the layers inside the container should start moving after the container touches the top of the user's browser. This is useful if you use the parallax effect inside the header of your website.  
-`layers ( object - default: {} )` - Object holding all the layers that you want to move inside the container. The **key** must be a CSS selector of one or many children inside the container, and the **value** must be an object holding any of the layer properties.  
-`layer properties ( object - default: { distance: '100%', direction: 'down' } )` - In here you can specify how much the layer should move and in which direction. The **distance** represents how much you would like the layer to move inside the container when the container is inside the view range ( the user can see it in the browser ). It can be expressed in **pixels** or **percentage**. As a general rule, when you have elements that are bigger than container ( such as images ) you should use percentage. The **direction** can have 4 values: up, down, left, right.
-  
-Example:  
-```javascript
-$('#mycontainer').parallaxor({
-    top     : false,
-    layers  : {
-        'img' : {
-            distance    : '100%',
         },
         'h1, h2.mytitleclass' : {
             distance    : '100px',
@@ -77,6 +59,21 @@ $('#mycontainer').parallaxor({
     }
 });
 ```
+
+Options
+-------------
+`top {bool|int}(default:true)`  
+Represents the distance from the top of the browser after which the layers start moving.  
+
+Here you have 3 cases:  
+1. Parallax container is glued on the top of the browser, without any pixels in between your container and the top of the browser you can set this to `true` or `0` or `0px` ( see [first](#examples) example ).  
+2. Parallax container is, for example, 100px from the top of the browser you can set this option to `100px` or `100`.  
+3. If you want the layers inside the container to move as soon as the container is inside the view range of the browser set this option to `false` ( see [second](#examples) example ).  
+
+`layers {object}(default:{})`  
+Object holding all the layers that you want to move inside the container. The **key** must be a CSS selector of one or many children inside the container and the **value** must be an object holding any of the layer properties specified below.  
+
+  `layer_properties {object}(default:{ distance: '100%', direction: 'down' })` - In here you can specify how much the layer should move and in which direction. The **distance** represents how much you would like the layer to move inside the container when the container is inside the view range ( the user can see it in the browser ). It can be expressed in **pixels** or **percentage**. As a general rule, when you have elements that are bigger than container ( such as images ) you should use percentage. The **direction** can have 4 values: up, down, left, right.
 
 Examples
 -------------
