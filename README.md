@@ -80,12 +80,15 @@ Here you have 3 cases:
 3. If you want the layers inside the container to move as soon as the container is inside the view range of the browser set this option to `false` ( see [second](#examples) example ).  
 
 `layers {object}(default:{})`  
-Object holding all the layers that you want to move inside the container. The **key** must be a CSS selector of one or many children inside the container and the **value** must be an object holding any of the layer properties specified below.  
+Object holding all the layers that you want to move inside the container.  
+
+The **key** must be a CSS selector of one or many children inside the container and the **value** must be an object holding any of the layer properties specified below.  
 
 `layer_properties {object}(default:{ distance: '100%', direction: 'down' })`  
-In here you can specify how much the layer should move and in which direction.  
+Properties of each layer representing the distance and the direction in which the layer should move.  
 
-The **distance** represents how much you would like the layer to move inside the container when the container is inside the view range ( the user can see it in the browser ). It can be expressed in **pixels** or **percentage**. As a general rule, when you have elements that are bigger than container ( such as images ) you should use percentage. The **direction** can have 4 values: `up`, `down`, `left`, `right`.
+The **distance** can be expressed in **pixels** or **percentage** and it represents how much the layer should move inside the container when the container is into the browser's view range. As a general rule, when you have elements that are bigger than container ( such as background images ) you should use percentage.  
+The **direction** can have 4 values: `up`, `down`, `left`, `right`.
 
 Examples
 -------------
