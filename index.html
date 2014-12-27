@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>Parallaxor</h1>
-        <p>Parallaxor is a simple jQuery plugin which allows you to create beautiful parallax effects for your website.  </p>
+        <p>Parallaxor is a simple jQuery plugin which allows you to create beautiful parallax effects for your website</p>
 
         <p class="view"><a href="https://github.com/alexandrubau/parallaxor">View the Project on GitHub <small>alexandrubau/parallaxor</small></a></p>
 
@@ -29,16 +29,18 @@
       </header>
       <section>
         <h1>
-<a id="parallaxor---v01" class="anchor" href="#parallaxor---v01" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallaxor - v0.1</h1>
+<a id="parallaxor" class="anchor" href="#parallaxor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallaxor</h1>
 
-<p>Parallaxor is a simple jQuery plugin which allows you to create beautiful parallax effects for your website with minimum code. It can be used to reposition any kind of element, in any direction, inside a container, based on user's scroll.  </p>
+<p>Parallaxor is a simple jQuery plugin which allows you to create beautiful parallax effects for your website with minimum code. It can be used to reposition any element, in any direction, inside a container, based on user's scroll.<br>
+Current version is 0.10</p>
 
 <h2>
 <a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of contents</h2>
 
 <ul>
 <li><a href="#compatibility">Compatibility</a></li>
-<li><a href="#how-does-it-work-">How does it work ?</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#how-does-it-work">How does it work</a></li>
 <li><a href="#installation-and-usage">Installation and usage</a></li>
 <li><a href="#options">Options</a></li>
 <li><a href="#examples">Examples</a></li>
@@ -53,9 +55,15 @@
 <p>Please use the <a href="https://github.com/alexandrubau/parallaxor/issues">tracker</a> to report any bugs. Thank you !</p>
 
 <h2>
-<a id="how-does-it-work-" class="anchor" href="#how-does-it-work-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does it work ?</h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
-<p>Parallaxor uses the CSS property called <code>transform</code> in conjuction with <code>translate</code> to reposition the elements inside the container when the user scrolls. Example: <code>transform: translate(0, 100px)</code> - this CSS code will move an element to the right for 100px. It is important for the container to have the CSS properties provided here ( <a href="https://raw.githubusercontent.com/alexandrubau/parallaxor/master/jquery.parallaxor.min.css">parallaxor.min.css</a> ) so don't forget to include the CSS file.</p>
+<p>This plugin requires <a href="http://jquery.com">jQuery</a> v1.11.2+ but it might work on older versions too. Make sure you include jQuery before the plugin.</p>
+
+<h2>
+<a id="how-does-it-work" class="anchor" href="#how-does-it-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does it work</h2>
+
+<p>Parallaxor uses the CSS property called <code>transform</code> in conjuction with <code>translate</code> to reposition the elements inside the container when the user scrolls.<br>
+Example: <code>transform: translate(0, 100px)</code> - this CSS code will move an element to the right for 100px.</p>
 
 <h2>
 <a id="installation-and-usage" class="anchor" href="#installation-and-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation and usage</h2>
@@ -65,53 +73,71 @@ Add the following line into the HEAD section of your website:  </p>
 
 <div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>parallaxor.min.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt;</pre></div>
 
-<p>Add the next line at the end of the BODY section of your website, right before closing the tag:  </p>
+<p>Add the next lines at the end of the BODY section of your website, right before closing the tag:  </p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>parallaxor.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://code.jquery.com/jquery-1.11.2.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>parallaxor.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Make sure you create a container with elements which will act as layers for the parallax effect.  </p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>mycontainer<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">h1</span>&gt;Parallaxor is awesome !&lt;/<span class="pl-ent">h1</span>&gt;
+  &lt;<span class="pl-ent">h2</span>&gt;This was too simple&lt;/<span class="pl-ent">h2</span>&gt;
+  &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>picture.jpg<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <p>Activate the script: </p>
 
 <div class="highlight highlight-javascript"><pre>$(<span class="pl-s1"><span class="pl-pds">'</span>#mycontainer<span class="pl-pds">'</span></span>).parallaxor({
-    top     <span class="pl-k">:</span> <span class="pl-c1">false</span>,
+    top     <span class="pl-k">:</span> <span class="pl-c1">true</span>,
     layers  <span class="pl-k">:</span> {
-        <span class="pl-s1"><span class="pl-pds">'</span>h1<span class="pl-pds">'</span></span>  <span class="pl-k">:</span> {
+        <span class="pl-s1"><span class="pl-pds">'</span>h1, h2<span class="pl-pds">'</span></span>  <span class="pl-k">:</span> {
             distance    <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>200px<span class="pl-pds">'</span></span>,
             direction   <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>right<span class="pl-pds">'</span></span>
+        },
+        <span class="pl-s1"><span class="pl-pds">'</span>img<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {
+            distance    <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>100%<span class="pl-pds">'</span></span>,
+            direction   <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>down<span class="pl-pds">'</span></span>
         }
     }
 });</pre></div>
+
+<p><strong>TIP:</strong> I suggest you to add the CSS class 'parallax-container' to the container you are using in order to avoid the 'flick' efect you might see. The class is added automatically by the plugin to your container but only after the browser loads the JavaScript file. Due to the delay, the user might see for a fraction of a second some elements that are not positioned corectly.</p>
 
 <h2>
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
 
-<p><code>top ( boolean - default: true )</code> - Determines if the layers inside the container should start moving after the container touches the top of the user's browser. This is useful if you use the parallax effect inside the header of your website.<br>
-<code>layers ( object - default: {} )</code> - Object holding all the layers that you want to move inside the container. The <strong>key</strong> must be a CSS selector of one or many children inside the container, and the <strong>value</strong> must be an object holding any of the layer properties.<br>
-<code>layer properties ( object - default: { distance: '100%', direction: 'down' } )</code> - In here you can specify how much the layer should move and in which direction. The <strong>distance</strong> represents how much you would like the layer to move inside the container when the container is inside the view range ( the user can see it in the browser ). It can be expressed in <strong>pixels</strong> or <strong>percentage</strong>. As a general rule, when you have elements that are bigger than container ( such as images ) you should use percentage. The <strong>direction</strong> can have 4 values: up, down, left, right.</p>
+<p><code>top {bool|int}(default:true)</code><br>
+Represents the distance from the top of the browser after which the layers start moving.  </p>
 
-<p>Example:  </p>
+<p>Here you have 3 cases:<br>
+1. Parallax container is glued on the top of the browser ( without any pixels in between your container and the top of the browser ) you can set this to <code>true</code> or <code>0</code> or <code>0px</code> ( see <a href="#examples">first</a> example ).<br>
+2. Parallax container is, for example, 100px from the top of the browser you can set this option to <code>100px</code> or <code>100</code>.<br>
+3. If you want the layers inside the container to move as soon as the container is inside the view range of the browser set this option to <code>false</code> ( see <a href="#examples">second</a> example ).  </p>
 
-<div class="highlight highlight-javascript"><pre>$(<span class="pl-s1"><span class="pl-pds">'</span>#mycontainer<span class="pl-pds">'</span></span>).parallaxor({
-    top     <span class="pl-k">:</span> <span class="pl-c1">false</span>,
-    layers  <span class="pl-k">:</span> {
-        <span class="pl-s1"><span class="pl-pds">'</span>img<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {
-            distance    <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>100%<span class="pl-pds">'</span></span>,
-        },
-        <span class="pl-s1"><span class="pl-pds">'</span>h1, h2.mytitleclass<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {
-            distance    <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>100px<span class="pl-pds">'</span></span>,
-            direction   <span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>left<span class="pl-pds">'</span></span>
-        }
-    }
-});</pre></div>
+<p><code>layers {object}(default:{})</code><br>
+Object holding all the layers that you want to move inside the container.  </p>
+
+<p>The <strong>key</strong> must be a CSS selector of one or many children inside the container and the <strong>value</strong> must be an object holding any of the layer properties specified below.  </p>
+
+<p><code>layer_properties {object}(default:{ distance: '100%', direction: 'down' })</code><br>
+Properties of each layer representing the distance and the direction in which the layer should move.  </p>
+
+<p>The <strong>distance</strong> can be expressed in <strong>pixels</strong> or <strong>percentage</strong> and it represents how much the layer should move inside the container when the container is into the browser's view range. As a general rule, when you have elements that are bigger than container ( such as background images ) you should use percentage.<br>
+The <strong>direction</strong> can have 4 values: <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code>.</p>
 
 <h2>
 <a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
 
-<p>For live examples check <a href="http://www.commingsoon.com">here</a> ( comming soon ).</p>
+<ul>
+<li><a href="http://alexandrubau.github.io/parallaxor/examples/first/index.html">First</a></li>
+<li><a href="http://alexandrubau.github.io/parallaxor/examples/second/index.html">Second</a></li>
+</ul>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>Released under the GNU General Public License ( <a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a> ).</p>
+<p>Released under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/alexandrubau">alexandrubau</a></p>
