@@ -12,7 +12,6 @@ Table of contents
 * [Installation and usage](#installation-and-usage)
 * [Options](#options)
 * [Examples](#examples)
-* [Suggestions and explanations](#suggestions-and-explanations)
 * [License](#license)
 
 Compatibility
@@ -80,11 +79,6 @@ $('#mycontainer').parallaxor({
 ```
 
 Examples
--------------
-* [First](http://alexandrubau.github.io/parallaxor/examples/first/index.html)
-* [Second](http://alexandrubau.github.io/parallaxor/examples/second/index.html)
-
-Suggestions and explanations
 -------------
 * [First](http://alexandrubau.github.io/parallaxor/examples/first/index.html)
 * [Second](http://alexandrubau.github.io/parallaxor/examples/second/index.html)
