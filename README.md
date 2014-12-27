@@ -81,13 +81,13 @@ $('#mycontainer').parallaxor({
 
 Examples
 -------------
-* [First](http://alexandrubau.github.io/parallaxor/examples/first/index.html){target="_blank"}
-* [Second](http://alexandrubau.github.io/parallaxor/examples/second/index.html){target="_blank"}
+* [First](http://alexandrubau.github.io/parallaxor/examples/first/index.html)
+* [Second](http://alexandrubau.github.io/parallaxor/examples/second/index.html)
 
 Suggestions and explanations
 -------------
-* [First](http://alexandrubau.github.io/parallaxor/examples/first/index.html){target="_blank"}
-* [Second](http://alexandrubau.github.io/parallaxor/examples/second/index.html){target="_blank"}
+* [First](http://alexandrubau.github.io/parallaxor/examples/first/index.html)
+* [Second](http://alexandrubau.github.io/parallaxor/examples/second/index.html)
 
 License
 -------------
