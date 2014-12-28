@@ -99,6 +99,16 @@
         },
 
         /**
+         * Method used to retreive the scroll distance of the document
+         * We use this function because on OS X the normal function could return negative values
+         * @return {int}
+         */
+        getDocumentScrollTop: function(){
+            var scrollTop = $(document).scrollTop();
+            return scrollTop >= 0 ? scrollTop : 0;
+        },
+
+        /**
          * Method called after the document has been loaded
          */
         onDocumentReady: function(){
@@ -133,11 +143,6 @@
                 return;
             }
 
-            // on OS X we might have negative scroll
-            if( this.isNegativeScroll() ){
-                return;
-            }
-
             // check if the container is above the specified top value ( if exists )
             if( !this.isAboveTop() ){
                 return;
@@ -148,10 +153,10 @@
             // should we start scrolling after the container reaches the top ?
             if( this.settings.top === 0 || this.settings.top ){
                 viewRange   = this.container.outerHeight(),
-                viewScroll  = $(document).scrollTop() - this.container.offset().top + parseInt(this.settings.top);
+                viewScroll  = this.getDocumentScrollTop() - this.container.offset().top + parseInt(this.settings.top);
             } else {
                 viewRange   = $(window).height() + this.container.outerHeight(),
-                viewScroll  = $(document).scrollTop() - this.container.offset().top + $(window).height();
+                viewScroll  = this.getDocumentScrollTop() - this.container.offset().top + $(window).height();
             }
 
             // calculate the view percentage
@@ -207,9 +212,9 @@
          */
         isInVisualRange: function(){
             if( 
-                this.container.offset().top + this.container.outerHeight() >= $(document).scrollTop() 
+                this.container.offset().top + this.container.outerHeight() >= this.getDocumentScrollTop()
                 &&
-                $(document).scrollTop() >= this.container.offset().top - $(window).height()
+                this.getDocumentScrollTop() >= this.container.offset().top - $(window).height()
             ){
                 return true;
             }
@@ -226,19 +231,11 @@
         },
 
         /**
-         * Method used to determine if document has a negative scroll value ( is possible on OS X )
-         * @return {Boolean}
-         */
-        isNegativeScroll: function(){
-            return $(document).scrollTop() < 0 || $(document).scrollLeft() < 0;
-        },
-
-        /**
          * Method used for checking if the container is above the specified top value ( if exists )
          * @return {Boolean}
          */
         isAboveTop: function(){
-            return $(document).scrollTop() + parseInt(this.settings.top) > this.container.offset().top;
+            return this.getDocumentScrollTop() + parseInt(this.settings.top) > this.container.offset().top;
         }
     });
 
