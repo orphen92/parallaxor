@@ -27,7 +27,7 @@
      * @type {Object}
      */
     var setting_defaults = {
-        top     : true,
+        top     : 0,
         layers  : {}
     };
 
