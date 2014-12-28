@@ -1,5 +1,7 @@
 /**
- * Parallaxor, a parallax jQuery plugin - v0.1
+ * Parallaxor - v0.10
+ * Simple jQuery plugin which allows you to create 
+ * beautiful parallax effects for your website
  * https://github.com/alexandrubau/parallaxor
  *
  * Copyright 2014 Alexandru Bau
@@ -66,8 +68,8 @@
         });
 
         // remember the container and the layers
-        this.container  = $(element); // make sure is a jQuery object
-        this.layers     = []; // this will be built later, check init()
+        this.container  = $(element);   // make sure is a jQuery object
+        this.layers     = [];           // this will be built later, check init()
 
         // initialize the plugin
         this.init();
@@ -97,7 +99,7 @@
         },
 
         /**
-         * Method called each time we scroll the document
+         * Method called after the document has been loaded
          */
         onDocumentReady: function(){
             this.moveLayers();
@@ -136,12 +138,17 @@
                 return;
             }
 
+            // check if the container is above the specified top value ( if exists )
+            if( !this.isAboveTop() ){
+                return;
+            }
+
             var viewRange, viewScroll, viewPercentage;
 
             // should we start scrolling after the container reaches the top ?
-            if( this.settings.top ){
+            if( this.settings.top === 0 || this.settings.top ){
                 viewRange   = this.container.outerHeight(),
-                viewScroll  = $(document).scrollTop() - this.container.offset().top;
+                viewScroll  = $(document).scrollTop() - this.container.offset().top + parseInt(this.settings.top);
             } else {
                 viewRange   = $(window).height() + this.container.outerHeight(),
                 viewScroll  = $(document).scrollTop() - this.container.offset().top + $(window).height();
@@ -224,6 +231,14 @@
          */
         isNegativeScroll: function(){
             return $(document).scrollTop() < 0 || $(document).scrollLeft() < 0;
+        },
+
+        /**
+         * Method used for checking if the container is above the specified top value ( if exists )
+         * @return {Boolean}
+         */
+        isAboveTop: function(){
+            return $(document).scrollTop() + parseInt(this.settings.top) > this.container.offset().top;
         }
     });
 
