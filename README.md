@@ -2,6 +2,7 @@ Parallaxor
 =============
 
 Parallaxor is a simple jQuery plugin which allows you to create beautiful parallax effects for your website with minimum code. It can be used to reposition any element, in any direction, inside a container, based on user's scroll.  
+  
 Current version is 0.10
 
 Table of contents
